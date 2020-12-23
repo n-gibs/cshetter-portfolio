@@ -12,6 +12,7 @@ import ScrollToTop from "react-scroll-up"
 import { FiChevronUp } from "react-icons/fi"
 import ReactMarkdown from "react-markdown"
 import Layout from "../components/Layout"
+import BackgroundImage from "gatsby-background-image"
 
 const SocialShare = [
   { Social: <FaFacebookF />, link: "https://www.facebook.com/" },
@@ -22,7 +23,7 @@ const SocialShare = [
 
 const Template = ({data}) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { content, title, description } = data.study.nodes[0].data
+  const { content, title, description, image } = data.study.nodes[0].data
 
   return (
     <>
@@ -35,7 +36,7 @@ const Template = ({data}) => {
       /> */}
       <Layout>
       {/* Start Breadcrump Area */}
-      <div
+      <BackgroundImage fluid={image.localFiles[0].childImageSharp.fluid}
         className="rn-page-title-area pt--120 pb--190 bg_image bg_image--4"
         data-black-overlay="7"
       >
@@ -54,7 +55,7 @@ const Template = ({data}) => {
             </div>
           </div>
         </div>
-      </div>
+      </BackgroundImage>
       {/* End Breadcrump Area */}
 
       {/* Start Portfolio Details */}
@@ -220,6 +221,15 @@ export const query = graphql`
           content
           description
           title
+          image {
+            localFiles {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
