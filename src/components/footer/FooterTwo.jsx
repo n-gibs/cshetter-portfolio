@@ -10,24 +10,24 @@ const SocialShare = [
     {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
 
-const query = graphql`
-  {
-    file(relativePath: { eq: "images/logo/logo.png" }) {
-      img: childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     file(relativePath: { eq: "images/logo/logo.png" }) {
+//       img: childImageSharp {
+//         fluid {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `
 
 const FooterTwo = () => {
-    const {
-        file: {
-          img: { fluid },
-        },
-      } = useStaticQuery(query)
+    // const {
+    //     file: {
+    //       img: { fluid },
+    //     },
+    //   } = useStaticQuery(query)
 
     return (
         <div className="footer-style-2 ptb--30 bg_image bg_image--1" data-black-overlay="6">
