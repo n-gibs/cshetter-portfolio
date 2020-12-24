@@ -23,9 +23,9 @@ class HeaderThree extends Component {
     this.stickyHeader = this.stickyHeader.bind(this);
 
     //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
-    window.addEventListener("load", function () {
-      console.log("All assets are loaded");
-    });
+    // window.addEventListener("load", function () {
+    //   console.log("All assets are loaded");
+    // });
   }
   menuTrigger() {
     document.querySelector(".header-wrapper").classList.toggle("menu-open");
