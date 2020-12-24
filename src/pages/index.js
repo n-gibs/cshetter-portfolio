@@ -14,7 +14,7 @@ const SlideList = [
   {
     textPosition: "text-left",
     category: "",
-    title: "Hello, I’m  Carolyn <span>Ux Researcher and Strategist.</span>",
+    title: "Hello, I’m  Carolyn <br/><span>UX Researcher and Strategist.</span>",
     description: "",
     buttonText: "",
     buttonLink: "",
@@ -22,11 +22,9 @@ const SlideList = [
 ];
 
 const PortfolioLanding = ({ data }) => {
-  console.log(data.getImage.img);
   const fluid = data.getImage.img.fluid;
   const caseStudies = data.getCaseStudies.nodes;
   const background = data.getBackgroundImage.img.fluid
-  console.log(caseStudies);
   let title = "About Me",
     description =
       'There are many variations of passages of Lorem Ipsum available, but the majority have suffered <a href="#">alteration</a> in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,';
@@ -40,7 +38,7 @@ const PortfolioLanding = ({ data }) => {
             {/* Start Single Slide */}
             {SlideList.map((value, index) => (
               <BackgroundImage fluid={background}
-                className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25"
+                className="bg-image-fade slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image"
                 key={index}
               >
                 <div className="container">

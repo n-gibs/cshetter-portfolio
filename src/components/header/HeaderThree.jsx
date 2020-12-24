@@ -61,19 +61,7 @@ class HeaderThree extends Component {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", this.stickyHeader);
     }
-    if (typeof document !== "undefined") {
-      var elements = document.querySelectorAll(".has-droupdown > a");
-      for (var i in elements) {
-        if (elements.hasOwnProperty(i)) {
-          elements[i].onclick = function () {
-            this.parentElement
-              .querySelector(".submenu")
-              .classList.toggle("active");
-            this.classList.toggle("open");
-          };
-        }
-      }
-    }
+
     const { logo, color = "default-color" } = this.props;
 
     return (

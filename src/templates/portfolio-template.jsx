@@ -35,10 +35,10 @@ const Template = ({data}) => {
         logoname="logo.png"
       /> */}
       <Layout>
-      {/* Start Breadcrump Area */}
+      {/* Start Breadcrump Area         data-black-overlay="7"
+*/}
       <BackgroundImage fluid={image.localFiles[0].childImageSharp.fluid}
-        className="rn-page-title-area pt--120 pb--190 bg_image bg_image--4"
-        data-black-overlay="7"
+        className="bg-image-fade rn-page-title-area pt--120 pb--190 bg_image"
       >
         <div className="container">
           <div className="row">
@@ -47,10 +47,10 @@ const Template = ({data}) => {
                 <h2 className="title theme-gradient">
                   {title}
                 </h2>
-                <p>
+                {/* <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text.{" "}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

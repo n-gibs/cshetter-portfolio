@@ -622,5 +622,13 @@
 }
 
 .bg-image-fade {
-    background: linear-gradient(rgba(196, 193, 193, 0.075), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(194, 165, 165, 0.623), rgba(0, 0, 0, 0.7));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1 !important;
 }
+
+// .bg-image-blur {
+//     opacity: 0.3;
+// }
