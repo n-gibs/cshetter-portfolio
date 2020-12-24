@@ -47,11 +47,13 @@ class HeaderThree extends Component {
 
   stickyHeader() {
     var value = window.scrollY;
+    if (typeof document !== "undefined") {
         if (value > 100) {
           document.querySelector(".header--fixed").classList.add("sticky");
         } else {
           document.querySelector(".header--fixed").classList.remove("sticky");
         }
+      }
   }
 
 
@@ -59,16 +61,17 @@ class HeaderThree extends Component {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", this.stickyHeader);
     }
-
-    var elements = document.querySelectorAll(".has-droupdown > a");
-    for (var i in elements) {
-      if (elements.hasOwnProperty(i)) {
-        elements[i].onclick = function () {
-          this.parentElement
-            .querySelector(".submenu")
-            .classList.toggle("active");
-          this.classList.toggle("open");
-        };
+    if (typeof document !== "undefined") {
+      var elements = document.querySelectorAll(".has-droupdown > a");
+      for (var i in elements) {
+        if (elements.hasOwnProperty(i)) {
+          elements[i].onclick = function () {
+            this.parentElement
+              .querySelector(".submenu")
+              .classList.toggle("active");
+            this.classList.toggle("open");
+          };
+        }
       }
     }
     const { logo, color = "default-color" } = this.props;
