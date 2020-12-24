@@ -25,34 +25,39 @@ class HeaderThree extends Component {
     //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
   }
 
-  componentDidMount() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("load", function () {
-        console.log("All assets are loaded");
-      });
+  // componentDidMount() {
+  //   if (typeof window !== "undefined") {
+  //     window.addEventListener("load", function () {
+  //       console.log("All assets are loaded");
+  //     });
+  //   }
+  // }
+
+  menuTrigger() {
+    if (typeof document !== "undefined") {
+      document.querySelector(".header-wrapper").classList.toggle("menu-open");
     }
   }
 
-  menuTrigger() {
-    document.querySelector(".header-wrapper").classList.toggle("menu-open");
-  }
-
   CLoseMenuTrigger() {
-    document.querySelector(".header-wrapper").classList.remove("menu-open");
+    if (typeof document !== "undefined") {
+      document.querySelector(".header-wrapper").classList.remove("menu-open");
+    }
   }
 
-  stickyHeader() {}
-
-  render() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", function () {
-        var value = window.scrollY;
+  stickyHeader() {
+    var value = window.scrollY;
         if (value > 100) {
           document.querySelector(".header--fixed").classList.add("sticky");
         } else {
           document.querySelector(".header--fixed").classList.remove("sticky");
         }
-      });
+  }
+
+
+  render() {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", this.stickyHeader);
     }
 
     var elements = document.querySelectorAll(".has-droupdown > a");
