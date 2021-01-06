@@ -105,7 +105,7 @@ const PortfolioLanding = ({ data }) => {
                         <p className="description">{about}</p>
                       </div>
                       <div className="row mt--30">
-                        <AboutMe tabStyle="tab-style--1" />
+                        <AboutMe />
                       </div>
                     </div>
                   </div>

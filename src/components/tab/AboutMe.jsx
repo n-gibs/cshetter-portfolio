@@ -15,7 +15,7 @@ const AboutMe = ({ tabStyle }) => {
           <div className="row">
             <div className="col-lg-12">
               <Tabs>
-                <TabList className={`${tabStyle}`}>
+                <TabList className='tab-style--1'>
                   <Tab>{tab1}</Tab>
                   {/* <Tab>{tab2}</Tab> */}
                   <Tab>{tab3}</Tab>
@@ -77,7 +77,7 @@ const AboutMe = ({ tabStyle }) => {
                     <ul>
                       <li>
                         <a href="/service">
-                          UX Researcher (freelance)<span> - Queer Bomb</span>
+                          UX Researcher (Freelance)<span> - Queer Bomb</span>
                         </a>{" "}
                         2020
                       </li>
