@@ -26,6 +26,10 @@ const ContactOne = () => {
   const [rnEmail, setRnEmail] = useState("");
   const [rnSubject, setRnSubject] = useState("");
   const [rnMessage, setRnMessage] = useState("");
+
+  const clearMessage = () => {
+    setRnMessage('');
+  }
   return (
     <Wrapper className="section">
       <div className="contact-form--1">
@@ -97,6 +101,7 @@ const ContactOne = () => {
                     </label>
                   </div>
                   <button
+                    onSubmit={() => {clearMessage()}}
                     className="rn-button-style--2 btn-solid submit-btn btn"
                     type="submit"
                     value="submit"
