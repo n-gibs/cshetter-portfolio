@@ -3,9 +3,9 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 
 const AboutMe = ({ tabStyle }) => {
   let tab1 = "Main skills",
-    tab2 = "Presentations",
+    // tab2 = "Presentations",
     tab3 = "Experience",
-    tab4 = "Education & Certification"
+    tab4 = "Education"
 
   return (
     <div>
@@ -17,7 +17,7 @@ const AboutMe = ({ tabStyle }) => {
               <Tabs>
                 <TabList className={`${tabStyle}`}>
                   <Tab>{tab1}</Tab>
-                  <Tab>{tab2}</Tab>
+                  {/* <Tab>{tab2}</Tab> */}
                   <Tab>{tab3}</Tab>
                   <Tab>{tab4}</Tab>
                 </TabList>
@@ -47,7 +47,7 @@ const AboutMe = ({ tabStyle }) => {
                   </div>
                 </TabPanel>
 
-                <TabPanel>
+                {/* <TabPanel>
                   <div className="single-tab-content">
                     <ul>
                       <li>
@@ -70,7 +70,7 @@ const AboutMe = ({ tabStyle }) => {
                       </li>
                     </ul>
                   </div>
-                </TabPanel>
+                </TabPanel> */}
 
                 <TabPanel>
                   <div className="single-tab-content">

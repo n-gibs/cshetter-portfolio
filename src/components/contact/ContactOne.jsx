@@ -25,17 +25,16 @@ const ContactOne = () => {
   const [rnEmail, setRnEmail] = useState("")
   const [rnSubject, setRnSubject] = useState("")
   const [rnMessage, setRnMessage] = useState("")
+  //TODO: connect form spree
   return (
     <div className="contact-form--1">
       <div className="container">
         <div className="row row--35 align-items-start">
           <div className="col-lg-6 order-2 order-lg-1">
             <div className="section-title text-left mb--50">
-              <h2 className="title">Hire Me.</h2>
+              <h2 className="title">Contact Me</h2>
               <p className="description">
-                I am available for freelance work. Connect with me via phone:{" "}
-                <a href="tel:+8801923088574">01923 088574</a> or email:
-                <a href="mailto:admin@example.com"> admin@example.com</a>{" "}
+                Send a message if you want to connect.
               </p>
             </div>
             <div className="form-wrapper">
