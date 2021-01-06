@@ -4,6 +4,7 @@ import PageHelmet from "../components/common/Helmet";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
 import ReactMarkdown from "react-markdown";
+import styled from "styled-components";
 import Layout from "../components/Layout";
 import BackgroundImage from "gatsby-background-image";
 
@@ -11,7 +12,7 @@ const Template = ({ data }) => {
   const { content, title, description, image } = data.study.nodes[0].data;
 
   return (
-    <>
+    <Wrapper className="section">
       <PageHelmet pageTitle={title} />
 
       {/* <Header
@@ -62,7 +63,7 @@ const Template = ({ data }) => {
                   </div> */}
                   </div>
                   <div className="inner">
-                    <div className="portfolio-button">
+                    <div className="portfolio-btn">
                       <Link className="rn-btn" to="/#portfolio">
                         Back to Portfolio
                       </Link>
@@ -116,7 +117,7 @@ const Template = ({ data }) => {
         </div>
         {/* End Back To Top */}
       </Layout>
-    </>
+    </Wrapper>
   );
 };
 
@@ -145,4 +146,118 @@ export const query = graphql`
   }
 `;
 
+const Wrapper = styled.section`
+
+  .portfolio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portfolio-details {
+    .inner {
+        @media #{$lg-layout} {
+            padding: 0 100px;
+        }
+        @media #{$md-layout} {
+            padding: 0 50px;
+        }
+        @media #{$sm-layout} {
+            padding: 0 30px;
+        }
+        @media #{$large-mobile} {
+            padding: 0px;
+        }
+        padding: 0 210px;
+        h2 {
+            line-height: 27px;
+            display: block;
+            margin-bottom: 0;
+            padding-bottom: 43px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            color: rgba(29, 29, 36, 0.75);
+            margin-bottom: 30px;
+
+            @media #{$lg-layout} {
+                margin-bottom: 22px;
+            }
+
+            @media #{$md-layout} {
+                margin-bottom: 22px;
+            }
+
+            @media #{$sm-layout} {
+                margin-bottom: 22px;
+            }
+            &.subtitle {
+                color: $heading-color;
+                font-size: 23px;
+                line-height: 44px;
+                margin-top: 28px;
+
+                @media #{$lg-layout} {
+                    font-size: 20px;
+                    line-height: 38px;
+                    margin-top: 24px;
+                }
+                @media #{$md-layout} {
+                    font-size: 18px;
+                    line-height: 38px;
+                    margin-top: 24px;
+                }
+                @media #{$sm-layout} {
+                    font-size: 18px;
+                    line-height: 38px;
+                    margin-top: 24px;
+                }
+            }
+        }
+        .portfolio-view-list {
+            margin: 0 -40px;
+            .port-view {
+                margin: 0 40px;
+                span {
+                    font-size: 16px;
+                    color: rgba(29, 29, 36, 0.75);
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+                h4 {
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+  .rn-page-title {
+    h2 {
+        &.title {
+            font-size: 72px;
+            @media #{$lg-layout} {
+                font-size: 56px;
+            }
+            @media #{$md-layout} {
+                font-size: 50px;
+            }
+            @media #{$sm-layout} {
+                font-size: 40px;
+                line-height: 59px;
+            }
+        }
+    }
+    p {
+        font-size: 22px;
+        line-height: 27px;
+        color: #c6c9d8;
+    }
+}
+`;
 export default Template;
