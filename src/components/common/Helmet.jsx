@@ -5,10 +5,10 @@ const PageHelmet = ({pageTitle}) => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle} || React Multipurpose Template </title>
+        <title>{pageTitle} </title>
         <meta
           name="description"
-          content="Trydo – Multipurpose React Template is a multi-use React template. It is designed to go well with multi-purpose websites. Trydo React Template will create that various landing Template, Creative Agency, And Corporate Website ."
+          content="Carolyn Shetter is a User Experience Researcher and Stragegist. This is where she showcases her work."
         />
       </Helmet>
     </>

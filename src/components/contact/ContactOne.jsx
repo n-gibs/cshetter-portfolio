@@ -26,7 +26,6 @@ const ContactOne = () => {
   const [rnEmail, setRnEmail] = useState("");
   const [rnSubject, setRnSubject] = useState("");
   const [rnMessage, setRnMessage] = useState("");
-  //TODO: connect form spree
   return (
     <Wrapper className="section">
       <div className="contact-form--1">
@@ -44,7 +43,7 @@ const ContactOne = () => {
                   <div className="form-group">
                     <label htmlFor="item01">
                       <input
-                        className='form-control'
+                        className="form-control"
                         type="text"
                         name="name"
                         id="item01"
@@ -58,7 +57,7 @@ const ContactOne = () => {
 
                     <label htmlFor="item02">
                       <input
-                        className='form-control'
+                        className="form-control"
                         type="text"
                         name="email"
                         id="item02"
@@ -71,7 +70,8 @@ const ContactOne = () => {
                     </label>
 
                     <label htmlFor="item03">
-                      <input className='form-control'
+                      <input
+                        className="form-control"
                         type="text"
                         name="subject"
                         id="item03"
@@ -84,7 +84,7 @@ const ContactOne = () => {
                     </label>
                     <label htmlFor="item04">
                       <textarea
-                        className='form-control'
+                        className="form-control"
                         type="text"
                         id="item04"
                         name="message"
@@ -151,4 +151,5 @@ const Wrapper = styled.section`
     }
   }
 `;
+
 export default ContactOne;

@@ -64,15 +64,7 @@ class HeaderThree extends Component {
             </nav>
           </div>
           <div className="header-right">
-            <div className="social-share-inner">
-              {/* <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
-                {SocialShare.map((val, i) => (
-                  <li key={i}>
-                    <a href={`${val.link}`}>{val.Social}</a>
-                  </li>
-                ))}
-              </ul> */}
-            </div>
+
 
             {/* Start Humberger Menu  */}
             <div className="humberger-menu d-block d-lg-none pl--20">
