@@ -3,13 +3,6 @@ import Image from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
-import {
-  FaTwitter,
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-} from "react-icons/fa";
-
 // const SocialShare = [
 //   { Social: <FaFacebookF />, link: "https://www.facebook.com/" },
 //   { Social: <FaLinkedinIn />, link: "https://www.linkedin.com/" },
