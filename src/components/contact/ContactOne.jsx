@@ -39,7 +39,7 @@ const ContactOne = () => {
               <div className="section-title text-left mb--50">
                 <h2 className="title">Contact Me</h2>
                 <p className="description">
-                  Send a message if you want to connect.
+                  Feel free to say hi and connect with me.
                 </p>
               </div>
               <div className="form-wrapper">

@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import styled from "styled-components";
 
 const AboutMe = () => {
-  let tab1 = "Main skills",
+  let tab1 = "Skills",
     // tab2 = "Presentations",
     tab3 = "Experience",
     tab4 = "Education";

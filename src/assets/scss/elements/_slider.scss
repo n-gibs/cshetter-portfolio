@@ -1,5 +1,5 @@
 /*====================
-    Slider Area 
+    Slider Area
 ======================*/
 
 
@@ -15,7 +15,7 @@
 .slider-fixed--height {
     min-height: 1080px;
     width: 100%;
-    
+
     @media #{$laptop-device} {
         min-height: 900px;
     }
@@ -32,7 +32,7 @@
 
 
 /*----------------------
-Slider Default Style 
+Slider Default Style
 ------------------------*/
 .slide {
     .inner {
@@ -109,7 +109,7 @@ Slider Default Style
             padding-top: 150px;
             padding-bottom: 150px;
         }
-        
+
 
         &.fullscreen {
             min-height: 950px;
@@ -190,7 +190,7 @@ Slider Default Style
                     color: #ffffff;
                     font-size: 100px;
                     font-weight: 900;
-                    
+
                     @media #{$lg-layout} {
                         font-size: 72px;
                     }
@@ -345,7 +345,7 @@ Slider Default Style
 }
 
 /*-------------------------
-Personal Portfolio  
+Personal Portfolio
 --------------------------*/
 .personal-portfolio-slider {
     position: relative;
@@ -497,7 +497,7 @@ Personal Portfolio
 
 
 /*--------------------------
-    Slider Digital Agency  
+    Slider Digital Agency
 ----------------------------*/
 
 .slider-digital-agency {
@@ -509,7 +509,7 @@ Personal Portfolio
 
 
 /* ----------------------
-    Slider Videi Bg 
+    Slider Videi Bg
 ------------------------*/
 
 .slider-video-bg {
@@ -611,7 +611,7 @@ Personal Portfolio
 }
 
 /*-------------------------
-For Slider Service 
+For Slider Service
 ---------------------------*/
 
 .slide {
@@ -620,7 +620,7 @@ For Slider Service
         @media #{$lg-layout} {
             margin-top: 20px;
         }
-        
+
         @media #{$laptop-device} {
             margin-top: 0px;
         }
@@ -637,7 +637,7 @@ For Slider Service
 }
 
 /*=======================
-    Slider Paralax 
+    Slider Paralax
 =========================*/
 
 .slider-paralax,
@@ -660,7 +660,7 @@ For Slider Service
 }
 
 /*--------------------------
-Slick Animation For Slider  
+Slick Animation For Slider
 -----------------------------*/
 .slick-slide {
     &.slick-current {
@@ -731,8 +731,8 @@ Slider Default Button And Dot STyle
                 display: none !important;
             }
             &:hover{
-                background: #f9004d;
-                border-color: #f9004d;
+                background: $theme-color;
+                border-color: $theme-color;
             }
             &::before {
                 line-height: 1;
@@ -785,7 +785,7 @@ Slider Default Button And Dot STyle
 }
 
 /*--------------------
-Custom Animation  
+Custom Animation
 ----------------------*/
 
 @-webkit-keyframes customOne {
@@ -834,7 +834,7 @@ Custom Animation
 }
 
 /*---------------------
-    Box Model  
+    Box Model
 ----------------------*/
 
 .box-model .service-wrapper {

@@ -1,5 +1,5 @@
 /*===================
-Button Area 
+Button Area
 ====================*/
 a {
     &.btn-transparent{
@@ -114,7 +114,7 @@ a {
         }
         &:hover{
             background: transparent;
-            color: #f9004d;
+            color: $theme-color;
             box-shadow: 0 10px 15px 0 rgba(0,0,0,0.1);
             transform: translateY(-5px);
         }
@@ -124,7 +124,7 @@ a {
 
 
 /*----------------------------
-    Video Popup Styles 
+    Video Popup Styles
 -------------------------------*/
 button {
     &.video-popup {
