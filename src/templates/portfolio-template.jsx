@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 import BackgroundImage from "gatsby-background-image";
 
 const Template = ({ data }) => {
-  const { content, title, description, image } = data.study.nodes[0].data;
+  const { content, title, image } = data.study.nodes[0].data;
 
   return (
     <Wrapper className="section">
@@ -51,7 +51,7 @@ const Template = ({ data }) => {
                 <div className="portfolio-details">
                   <div className="inner">
                     {/* <h2>{title}</h2> */}
-                    <p className="subtitle">{description}</p>
+                    {/* <p className="subtitle">{description}</p> */}
                     <ReactMarkdown source={content} />
 
                     {/* <div className="portfolio-view-list d-flex flex-wrap">
@@ -129,7 +129,6 @@ export const query = graphql`
       nodes {
         data {
           content
-          description
           title
           image {
             localFiles {
@@ -240,6 +239,7 @@ const Wrapper = styled.section`
   .rn-page-title {
     h2 {
         &.title {
+
             font-size: 72px;
             @media #{$lg-layout} {
                 font-size: 56px;
@@ -251,6 +251,7 @@ const Wrapper = styled.section`
                 font-size: 40px;
                 line-height: 59px;
             }
+            color: $theme-color;
         }
     }
     p {
