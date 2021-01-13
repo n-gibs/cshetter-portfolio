@@ -1,5 +1,5 @@
 /*=====================
-Common Css 
+Common Css
 =======================*/
 
 
@@ -371,8 +371,9 @@ p:last-child {
     background: linear-gradient(-259deg, #f81f01 0, #ee076e 100%);
 }
 .bg-theme-gradient {
-    background: #f81f01;
-    background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
+    background: $gradient-color;
+    background: linear-gradient(145deg, $theme-color 0%, $gradient-color 100%);
+    //background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f81f01', endColorstr='#ee076e',GradientType=1 );
 }
 
