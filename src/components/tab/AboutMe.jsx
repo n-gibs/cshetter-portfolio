@@ -9,7 +9,7 @@ const AboutMe = () => {
     tab4 = "Education";
 
   return (
-    <Wrapper className='section'>
+    <Wrapper className="section">
       {/* Start Tabs Area */}
       <div className="tabs-area">
         <div className="container">
@@ -27,16 +27,22 @@ const AboutMe = () => {
                   <div className="single-tab-content">
                     <ul>
                       <li>
-                        <div className='item'>User Experience Research</div>
-                        Making sure the designs work for the users.
+                        <div className="item">User Experience Research</div>
+                        {/* <ul className="list">
+                          <li>ethographic interviews </li>
+                          <li>synthesis & analysis</li>
+                          <li>moderated & unmoderated usability studies</li>
+                        </ul> */}
+                        ethographic interviews, synthesis & analysis, moderated & unmoderated usability studies
                       </li>
                       <li>
-                        <div className='item'>UX Strategy</div>
-                        Applying what is learned from our research
+                        <div className="item">UX Strategy</div>
+                        facilitation, stakeholder management, project management
                       </li>
                       <li>
-                        <div className='item'>Service Design</div>
-                        No one like a poorly designed service
+                        <div className="item">Process</div>
+                        user-centered design, design thinking, cross-functional
+                        collaboration
                       </li>
                     </ul>
                   </div>
@@ -71,19 +77,19 @@ const AboutMe = () => {
                   <div className="single-tab-content">
                     <ul>
                       <li>
-                        <div className='item'>
+                        <div className="item">
                           UX Researcher (Freelance)<span> - Queer Bomb</span>
                         </div>{" "}
                         2020
                       </li>
                       <li>
-                        <div className='item'>
+                        <div className="item">
                           UX Strategist (Freelance)<span> - Queer Bomb</span>
                         </div>{" "}
                         2020
                       </li>
                       <li>
-                        <div className='item'>
+                        <div className="item">
                           Program Manager<span> - College Forward </span>
                         </div>{" "}
                         2018-2019
@@ -96,14 +102,14 @@ const AboutMe = () => {
                   <div className="single-tab-content">
                     <ul>
                       <li>
-                        <div className='item'>
+                        <div className="item">
                           Certification in User Experience
                           <span> - Austin Community College</span>
                         </div>{" "}
                         2021
                       </li>
                       <li>
-                        <div className='item'>
+                        <div className="item">
                           BS in Chemistry
                           <span> - Allegheny College</span>
                         </div>{" "}
@@ -181,6 +187,15 @@ const Wrapper = styled.section`
           }
         }
       }
+    }
+  }
+
+  .list {
+    /* list-style: none; */
+    list-style-type: circle;
+
+    li {
+      display: inline;
     }
   }
 
