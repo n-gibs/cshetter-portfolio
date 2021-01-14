@@ -171,9 +171,12 @@ const Wrapper = styled.section`
         @media #{$large-mobile} {
             padding: 0px;
         }
+        li {
+          font-size: 18px;
+        }
         padding: 0 210px;
         h2 {
-            line-height: 27px;
+            line-height: 50px;
             display: block;
             margin-bottom: 0;
             padding-bottom: 43px;
