@@ -3,13 +3,15 @@ import { graphql, Link } from "gatsby";
 import PageHelmet from "../components/common/Helmet";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
-import ReactMarkdown from "react-markdown";
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import BackgroundImage from "gatsby-background-image";
 
 const Template = ({ data }) => {
-  const { content, title, image } = data.study.nodes[0].data;
+  console.log(data);
+  const { title, image } = data.study.nodes[0].data;
+  const {body} = data.content;
 
   return (
     <Wrapper className="section">
@@ -52,7 +54,7 @@ const Template = ({ data }) => {
                   <div className="inner">
                     {/* <h2>{title}</h2> */}
                     {/* <p className="subtitle">{description}</p> */}
-                    <ReactMarkdown source={content} />
+                    <MDXRenderer>{body}</MDXRenderer>
 
                     {/* <div className="portfolio-view-list d-flex flex-wrap">
 
@@ -128,7 +130,6 @@ export const query = graphql`
     ) {
       nodes {
         data {
-          content
           title
           image {
             localFiles {
@@ -141,6 +142,9 @@ export const query = graphql`
           }
         }
       }
+    }
+    content: mdx(frontmatter: {slug: {eq: $slug}}) {
+      body
     }
   }
 `;

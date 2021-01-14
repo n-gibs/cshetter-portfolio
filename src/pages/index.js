@@ -2,7 +2,7 @@ import React from "react";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
 import Image from "gatsby-image";
-import BackgroundImage from 'gatsby-background-image';
+import BackgroundImage from "gatsby-background-image";
 import { graphql } from "gatsby";
 import ContactOne from "../components/contact/ContactOne";
 import Helmet from "../components/common/Helmet";
@@ -14,7 +14,8 @@ const SlideList = [
   {
     textPosition: "text-left",
     category: "",
-    title: "Hello, I’m  Carolyn <br/><span>UX Researcher and Strategist.</span>",
+    title:
+      "Hello, I’m  Carolyn <br/><span>UX Researcher and Strategist.</span>",
     description: "",
     buttonText: "",
     buttonLink: "",
@@ -22,9 +23,9 @@ const SlideList = [
 ];
 
 const PortfolioLanding = ({ data }) => {
-  const fluid = data.getImage.img.fluid;
+  const fluid = data.getImage.img[0].node.childImageSharp.fluid;
   const caseStudies = data.getCaseStudies.nodes;
-  const background = data.getBackgroundImage.img.fluid
+  const background = data.getBackgroundImage.img[0].node.childImageSharp.fluid;
   const about = data.getAboutMe.nodes[0].data.description;
 
   let title = "About Me";
@@ -38,7 +39,8 @@ const PortfolioLanding = ({ data }) => {
           <div className="slider-wrapper">
             {/* Start Single Slide */}
             {SlideList.map((value, index) => (
-              <BackgroundImage fluid={background}
+              <BackgroundImage
+                fluid={background}
                 className="bg-image-fade slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image"
                 key={index}
               >
@@ -118,7 +120,7 @@ const PortfolioLanding = ({ data }) => {
         {/* End About Area */}
 
         {/* Start Portfolio Area */}
-        <PortfolioSection caseStudies={caseStudies}/>
+        <PortfolioSection caseStudies={caseStudies} />
         {/* End Portfolio Area */}
 
         {/* Start COntact Area */}
@@ -142,18 +144,33 @@ const PortfolioLanding = ({ data }) => {
 
 export const query = graphql`
   {
-    getImage: file(relativePath: { eq: "images/linkedin.png" }) {
-      img: childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+    getImage: allFile(
+      filter: { sourceInstanceName: { eq: "images" }, name: { eq: "linkedin" } }
+    ) {
+      img: edges {
+        node {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
 
-    getBackgroundImage: file(relativePath: { eq: "images/rainbow-background.jpg" }) {
-      img: childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+    getBackgroundImage: allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        name: { eq: "rainbow-background" }
+      }
+    ) {
+      img: edges {
+        node {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

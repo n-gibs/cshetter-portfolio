@@ -5,10 +5,19 @@ import styled from "styled-components";
 
 const query = graphql`
   {
-    file(relativePath: { eq: "images/contact-pic.jpg" }) {
-      img: childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        name: { eq: "contact-pic" }
+      }
+    ) {
+      img: edges {
+        node {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
         }
       }
     }
@@ -16,11 +25,11 @@ const query = graphql`
 `;
 
 const ContactOne = () => {
-  const {
-    file: {
-      img: { fluid },
-    },
-  } = useStaticQuery(query);
+  const data = useStaticQuery(query)
+  console.log(data);
+  const {fluid } = data.allFile.img[0].node.childImageSharp
+
+
 
   const [rnName, setRnName] = useState("");
   const [rnEmail, setRnEmail] = useState("");
@@ -28,8 +37,8 @@ const ContactOne = () => {
   const [rnMessage, setRnMessage] = useState("");
 
   const clearMessage = () => {
-    setRnMessage('');
-  }
+    setRnMessage("");
+  };
   return (
     <Wrapper className="section">
       <div className="contact-form--1">
@@ -101,7 +110,9 @@ const ContactOne = () => {
                     </label>
                   </div>
                   <button
-                    onSubmit={() => {clearMessage()}}
+                    onSubmit={() => {
+                      clearMessage();
+                    }}
                     className="rn-button-style--2 btn-solid submit-btn btn"
                     type="submit"
                     value="submit"
