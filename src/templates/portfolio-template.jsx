@@ -180,7 +180,6 @@ const Wrapper = styled.section`
             display: block;
             margin-bottom: 0;
             padding-bottom: 43px;
-            border-bottom: 1px solid #e1e1e1;
         }
         p {
             font-size: 18px;
