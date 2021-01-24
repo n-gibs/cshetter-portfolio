@@ -179,7 +179,8 @@ const Wrapper = styled.section`
             line-height: 50px;
             display: block;
             margin-bottom: 0;
-            padding-bottom: 43px;
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
         p {
             font-size: 18px;
