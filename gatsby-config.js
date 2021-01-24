@@ -21,7 +21,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -62,18 +61,18 @@ module.exports = {
         ],
       },
     },
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+            },
           },
         ],
-        defaultLayouts: {
-          portfolio: require.resolve("./src/templates/portfolio-template.jsx"),
-          // default: require.resolve("./src/components/layout.js"),
-        },
       },
     },
     {
