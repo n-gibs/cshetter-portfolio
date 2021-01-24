@@ -183,6 +183,7 @@ export const query = graphql`
           title
           description
           url
+          tags
           image {
             localFiles {
               childImageSharp {
