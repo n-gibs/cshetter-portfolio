@@ -15,7 +15,7 @@ const query = graphql`
         node {
           childImageSharp {
             fluid {
-              src
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -26,8 +26,8 @@ const query = graphql`
 
 const ContactOne = () => {
   const data = useStaticQuery(query)
-  console.log(data);
-  const {fluid } = data.allFile.img[0].node.childImageSharp
+  const image = data.allFile.img[0].node.childImageSharp.fluid;
+
 
 
 
@@ -126,7 +126,7 @@ const ContactOne = () => {
             </div>
             <div className="col-lg-6 order-1 order-lg-2">
               <div className="thumbnail mb_md--30 mb_sm--30">
-                <Image fluid={fluid} alt="about-me" />
+                <Image fluid={image} alt="about-me" />
               </div>
             </div>
           </div>
