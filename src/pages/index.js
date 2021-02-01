@@ -175,7 +175,10 @@ export const query = graphql`
       }
     }
 
-    getCaseStudies: allAirtable(filter: { table: { eq: "Case Studies" } }) {
+    getCaseStudies: allAirtable(
+      filter: { table: { eq: "Case Studies" } }
+      sort: { order: ASC, fields: data___featured_id }
+    ) {
       nodes {
         id
         data {

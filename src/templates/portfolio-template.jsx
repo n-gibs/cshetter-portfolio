@@ -9,7 +9,6 @@ import Layout from "../components/Layout";
 import BackgroundImage from "gatsby-background-image";
 
 const Template = ({ data }) => {
-  console.log(data);
   const { title, image } = data.study.nodes[0].data;
   const {body} = data.content;
 
