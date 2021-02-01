@@ -17,8 +17,8 @@ const SlideList = [
     title:
       "Hello, I’m  Carolyn <br/><span>UX Researcher and Strategist.</span>",
     description: "",
-    buttonText: "",
-    buttonLink: "",
+    buttonText: "view my portfolio",
+    buttonLink: "#portfolio",
   },
 ];
 
