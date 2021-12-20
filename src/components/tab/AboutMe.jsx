@@ -44,6 +44,10 @@ const AboutMe = () => {
                         user-centered design, design thinking, cross-functional
                         collaboration
                       </li>
+                      <li>
+                        <div className="item">Rsearch Operation</div>
+                        knowledge management, participant management, reseach facilitation
+                      </li>
                     </ul>
                   </div>
                 </TabPanel>
@@ -78,21 +82,21 @@ const AboutMe = () => {
                     <ul>
                       <li>
                         <div className="item">
+                          Research Operations Associate<span> - Auth0</span>
+                        </div>{" "}
+                        Jun 2021 - Present
+                      </li>
+                      <li>
+                        <div className="item">
+                          UX Strategy Intern<span> - Austin Public Library</span>
+                        </div>{" "}
+                        Jan 2021 - May 2021
+                      </li>
+                      <li>
+                        <div className="item">
                           UX Researcher (Freelance)<span> - Queer Bomb</span>
                         </div>{" "}
-                        2020
-                      </li>
-                      <li>
-                        <div className="item">
-                          UX Strategist (Freelance)<span> - Queer Bomb</span>
-                        </div>{" "}
-                        2020
-                      </li>
-                      <li>
-                        <div className="item">
-                          Program Manager<span> - College Forward </span>
-                        </div>{" "}
-                        2018-2019
+                        Sept 2020 - Dec 2020
                       </li>
                     </ul>
                   </div>

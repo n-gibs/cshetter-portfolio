@@ -15,7 +15,7 @@ const SlideList = [
     textPosition: "text-left",
     category: "",
     title:
-      "Hello, I’m  Carolyn <br/><span>UX Researcher and Strategist.</span>",
+      "Hello, I’m  Carolyn <br/><span>Design Research & Research Operations</span>",
     description: "",
     buttonText: "view my portfolio",
     buttonLink: "#portfolio",
