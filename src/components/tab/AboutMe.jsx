@@ -27,6 +27,10 @@ const AboutMe = () => {
                   <div className="single-tab-content">
                     <ul>
                       <li>
+                        <div className="item">Research Operation</div>
+                        knowledge management, participant management, reseach facilitation
+                      </li>
+                      <li>
                         <div className="item">User Experience Research</div>
                         {/* <ul className="list">
                           <li>ethographic interviews </li>
@@ -44,10 +48,7 @@ const AboutMe = () => {
                         user-centered design, design thinking, cross-functional
                         collaboration
                       </li>
-                      <li>
-                        <div className="item">Rsearch Operation</div>
-                        knowledge management, participant management, reseach facilitation
-                      </li>
+
                     </ul>
                   </div>
                 </TabPanel>
